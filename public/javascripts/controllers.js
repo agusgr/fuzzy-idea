@@ -2,13 +2,12 @@
 
 	var fuzzyApp = angular.module('fuzzyApp', []);
 	fuzzyApp.controller('FuzzyController', function() {
-		this.user = fooUser;
+		this.users = users;
 	});
 
-	var fooUser = {
-		name : 'Foo',
-		pswd : 'bar',
-		decription : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		admin : true
-	}
+	  var users = [
+	    { name: 'Bruce', psw: 295, surname : 'Wayne', admin : true },
+	    { name: 'Peter', psw: 595, surname : 'Parker', admin : true },
+	    { name: 'Clark', psd: 395, surname : 'Kent', admin : true}
+	  ];
 })();

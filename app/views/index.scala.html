@@ -4,11 +4,31 @@
     <div ng-controller="FuzzyController as fuzzy">
         <ul class="list-group">
           <li class="list-group-item" ng-repeat= "user in fuzzy.users">
-          <h2>{{user.name}} {{user.surname}}
-            <em class="pull-right">{{user.psw}}</em>
-            <button ng-show={{user.admin}}>Dale !!!</button>
-            <button ng-hide={{user.admin}}>Ahora aquí !!!</button>
-          </h2>
+          <h1>{{user.hero}}</h1>
+          <section ng-controller="TabController as tab">
+            <ul class="nav nav-pills">
+            <li ng-class="{ active:tab.isSet(1) }">
+              <a href="" ng-click="tab.setTab(1)">Description</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(2) }">
+              <a href="" ng-click="tab.setTab(2)">Specs</a>
+            </li>
+            <li ng-class="{ active:tab.isSet(3) }">
+              <a href="" ng-click="tab.setTab(3)">Reviews</a>
+            </li>
+          </ul>
+          <div ng-show="tab.isSet(1)">
+            <h4>Secret Identity</h4>
+            <blockquote>{{user.name}} {{user.surname}}</blockquote>
+          </div>
+          <div ng-show="tab.isSet(2)">
+            <h4>Secret Code</h4>
+            <blockquote>  {{user.psw}}</blockquote>
+          </div>
+          <div ng-show="tab.isSet(3)">
+            <h4>Logo</h4>
+            <blockquote>....</blockquote>
+          </div>
         </ul>
     </div>
 }

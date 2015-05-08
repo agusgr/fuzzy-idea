@@ -8,6 +8,7 @@
 	var fooUser = {
 		name : 'Foo',
 		pswd : 'bar',
-		decription : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+		decription : 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+		admin : true
 	}
 })();
